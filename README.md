@@ -75,3 +75,10 @@ source $KALDI_ROOT/tools/env.sh
 
 8) For running script to record audio:
 sudo apt-get install python-pyaudio python3-pyaudio
+
+Licenses:
+
+Voxforge ru - GPL license
+Kaldi - Apache License
+
+
