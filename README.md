@@ -85,6 +85,7 @@
     - put file in ./tools/srilm.tgz (it should be renamed)
   
   `sudo apt-get install gawk`
+  
   `./install_srilm.sh`
 
   *You should get:*
