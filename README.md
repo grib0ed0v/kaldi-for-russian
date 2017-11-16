@@ -61,6 +61,7 @@
 ## 5) Copy or create symbolic links to utils & steps:
 
   `ln -s ../../voxforge/s5/steps steps`
+  
   `ln -s ../../voxforge/s5/utils utils`
 
 ## 6) Install additional dependencies:
