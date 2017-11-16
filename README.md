@@ -72,11 +72,16 @@
   `./install_srilm.sh`
   
   If you face the following message:
+  
     This script cannot install SRILM in a completely automatic
     way because you need to put your address in a download form.
+  
   then:
+    
     - go to http://www.speech.sri.com/projects/srilm/download.html
+    
     - download srilm...
+    
     - put file in ./tools/srilm.tgz (it should be renamed)
   
   `sudo apt-get install gawk`
