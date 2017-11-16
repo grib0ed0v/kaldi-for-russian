@@ -1,10 +1,10 @@
 Manual Kaldi for Russian:
 
 1) Get source code of Kaldi & Voxforge_ru recipe for Kaldi:
-git clone https://github.com/kaldi-asr/kaldi.git
-cd kaldi/egs/
-git clone https://github.com/freerussianasr/recipes.git
-cd ..
+`git clone https://github.com/kaldi-asr/kaldi.git`
+`cd kaldi/egs/`
+`git clone https://github.com/freerussianasr/recipes.git`
+`cd ..`
 
 2) Build tools:
 cd tools
