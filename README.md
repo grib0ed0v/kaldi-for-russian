@@ -1,50 +1,76 @@
 Manual Kaldi for Russian:
 
-1) Get source code of Kaldi & Voxforge_ru recipe for Kaldi:
+# 1) Get source code of Kaldi & Voxforge_ru recipe for Kaldi:
 
-`git clone https://github.com/kaldi-asr/kaldi.git`
+  `git clone https://github.com/kaldi-asr/kaldi.git`
 
-`cd kaldi/egs/`
+  `cd kaldi/egs/`
 
-`git clone https://github.com/freerussianasr/recipes.git`
+  `git clone https://github.com/freerussianasr/recipes.git`
 
-`cd ..`
+  `cd ..`
 
-2) Build tools:
-cd tools
-extras/check_dependencies.sh
-Install dependencies until you've got: ./extras/check_dependencies.sh: all OK.
-In my particular case:
-sudo apt-get install libtool subversion
-sudo ln -s -f bash /bin/sh
-make -j 4
-wait until you have got: All done OK.
-cd ..
+# 2) Build tools:
+  
+  `cd tools`
+  
+  `extras/check_dependencies.sh`
+  
+  `Install dependencies until you've got: ./extras/check_dependencies.sh: all OK.`
 
-3) Build src:
-cd src
-./configure You should get SUCCESS
-make depend -j 2
-make -j 2
-wait until you have got: Done
-cd ..
+  In my particular case:
+  
+  `sudo apt-get install libtool subversion`
+  
+  `sudo ln -s -f bash /bin/sh`
+  
+  `make -j 4`
 
-4) Go and get data for voxforge_ru
-cd egs/recipes/voxforge_ru
-./getdata.sh
+  wait until you have got: All done OK.
+  
+  `cd ..`
 
-You should get:
-FINISHED —2016-10-24 22:54:44--
-Total wall clock time: 1h 17m 39s
+# 3) Build src:
+  
+  `cd src`
+  
+  `./configure` 
+  
+  You should get SUCCESS
 
-5) Copy or create symbolic links to utils & steps
-ln -s ../../voxforge/s5/steps steps
-ln -s ../../voxforge/s5/utils utils
+  `make depend -j 2`
+  
+  `make -j 2`
+  
+  wait until you have got: Done
 
-6) Install additional dependencies:
-sudo apt-get install flac
-cd ../../../tools/
-./install_srilm.sh
+  `cd ..`
+
+# 4) Go and get data for voxforge_ru
+
+  `cd egs/recipes/voxforge_ru`
+  
+  `./getdata.sh`
+
+  You should get:
+  
+  FINISHED —2016-10-24 22:54:44--
+  
+  Total wall clock time: 1h 17m 39s
+
+# 5) Copy or create symbolic links to utils & steps
+
+  `ln -s ../../voxforge/s5/steps steps`
+  `ln -s ../../voxforge/s5/utils utils`
+
+# 6) Install additional dependencies:
+
+  `sudo apt-get install flac`
+  
+  `cd ../../../tools/`
+  
+  `./install_srilm.sh`
+  
 if you face the following message:
 This script cannot install SRILM in a completely automatic
 way because you need to put your address in a download form.
@@ -69,7 +95,7 @@ You should get:
 Installation of SEQUITUR finished successfully
 cd ../../
 
-7) Run training script:
+# 7) Run training script:
 cd egs/recipes/voxforge_ru
 
 Add to path.sh the following line:
@@ -77,7 +103,7 @@ source $KALDI_ROOT/tools/env.sh
 
 ./run.sh
 
-8) For running script to record audio:
+# 8) For running script to record audio:
 sudo apt-get install python-pyaudio python3-pyaudio
 
 Licenses:
